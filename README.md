@@ -1,2 +1,2 @@
 # hvg_utils
-Utils for games from Hvedgehog studio
+Base for games from Hvedgehog studio
