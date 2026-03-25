@@ -1,0 +1,78 @@
+[gd_resource type="Theme" format=3 uid="uid://bo6k8qdiju6ja"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ioqn"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.38409144, 0.4315015, 0.59136724, 0.78431374)
+border_width_left = 8
+border_width_top = 12
+border_width_right = 8
+border_width_bottom = 1
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 42
+corner_radius_bottom_left = 42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxams"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.29803923, 0.41960785, 0.7411765, 0.78431374)
+border_width_left = 8
+border_width_top = 12
+border_width_right = 8
+border_width_bottom = 4
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 42
+corner_radius_bottom_left = 42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vhku8"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.29803923, 0.41960785, 0.7411765, 0.78431374)
+border_width_left = 8
+border_width_top = 10
+border_width_right = 8
+border_width_bottom = 4
+corner_radius_top_left = 42
+corner_radius_top_right = 42
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3f3va"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.29803923, 0.41960785, 0.7411765, 0.78431374)
+border_width_left = 8
+border_width_top = 12
+border_width_right = 8
+border_width_bottom = 4
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 42
+corner_radius_bottom_left = 42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gvtt4"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.29803923, 0.41960785, 0.7411765, 0.78431374)
+border_width_left = 8
+border_width_top = 10
+border_width_right = 8
+border_width_bottom = 4
+corner_radius_top_left = 42
+corner_radius_top_right = 42
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6ioqn"]
+
+[resource]
+Button/font_sizes/font_size = 192
+Button/styles/disabled = SubResource("StyleBoxFlat_6ioqn")
+Button/styles/hover = SubResource("StyleBoxFlat_lxams")
+Button/styles/hover_pressed = SubResource("StyleBoxFlat_vhku8")
+Button/styles/normal = SubResource("StyleBoxFlat_3f3va")
+Button/styles/pressed = SubResource("StyleBoxFlat_gvtt4")
+Label/font_sizes/font_size = 192
+Label/styles/normal = SubResource("StyleBoxEmpty_6ioqn")

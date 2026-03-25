@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Get the root of the git repository
+REPOS_ROOT="$(git rev-parse --show-toplevel)"
+cd "$REPOS_ROOT" || { echo "Error: Not a git repository"; exit 1; }
+
+# Initialize variable for gitignore rules
+GITIGNORE_RULES=""
+
+# Check if .gitignore exists before processing
+if [ -f ".gitignore" ]; then
+    # 1. Read .gitignore
+    # 2. Remove comments (lines starting with #)
+    # 3. Remove empty lines
+    # 4. Strip trailing slashes from directory patterns (e.g., .godot/ -> .godot) 
+    #    to ensure better compatibility with most python ignore filters
+    # 5. Convert newlines to commas
+    # 6. Remove the trailing comma
+    GITIGNORE_RULES=$(grep -v '^#' .gitignore | grep -v '^$' | sed 's/\/$//' | tr '\n' ',' | sed 's/,$//')
+fi
+
+# Define your additional custom ignore patterns
+EXTRA_IGNORE=".venv,.git,.gitignore,.gitattributes,*.lock,.editorconfig,.env.*,*.svg,*.svg.import"
+
+# Combine both lists. If GITIGNORE_RULES is empty, only EXTRA_IGNORE is used.
+if [ -z "$GITIGNORE_RULES" ]; then
+    FULL_IGNORE="$EXTRA_IGNORE"
+else
+    FULL_IGNORE="${EXTRA_IGNORE},${GITIGNORE_RULES}"
+fi
+
+# Execute the target script with the combined ignore list
+./scripts/repo2txt.py -d ./ --ignore="$FULL_IGNORE"

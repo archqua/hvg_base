@@ -14,3 +14,28 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Build outputs
+dist/
+*.apk
+*.apks
+*.aab
+
+# Security and Keys
+*.keystore
+*.jks
+*.pub
+*.pem
+
+# IDEs and System files
+.DS_Store
+.vscode/
+.idea/
+*.xcodeproj/
+*.xcworkspace/
+
+# Logs
+*.log
+
+# Dump for LLM
+dump.txt
